@@ -68,3 +68,25 @@
         @apply bg-background text-foreground;
     }
 }
+
+@layer components {
+    .title {
+        @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
+    }
+
+    .subtitle {
+        @apply mb-8 text-lg font-light text-muted-foreground;
+    }
+
+    .badge {
+        @apply z-10 flex h-[68px] min-w-[200px] items-center gap-x-4 rounded-[10px] border border-border/40 bg-muted/95 p-4 shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-muted/60;
+    }
+}
+
+@layer utilities {
+    @media (max-width: 640px) {
+        .container {
+            @apply px-4;
+        }
+    }
+}
