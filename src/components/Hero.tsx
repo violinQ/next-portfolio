@@ -58,7 +58,7 @@ const Hero = () => {
             />
             {/* badge 3 */}
             <Badge
-              className="absolute -right-8 top-[55%]"
+              className="absolute -right-4 top-[55%]"
               badgeText="Happy Clients"
               icon={<RiTeamFill />}
               endCountNUm={10}
