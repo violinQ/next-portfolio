@@ -67,19 +67,27 @@
     body {
         @apply bg-background text-foreground;
     }
-}
 
-@layer components {
-    .title {
+    h1 {
         @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
     }
 
-    .subtitle {
-        @apply mb-8 text-lg font-light text-muted-foreground;
+    h2 {
+        @apply text-4xl font-bold;
     }
 
+    h3 {
+        @apply text-3xl font-bold;
+    }
+
+    h4 {
+        @apply text-2xl font-semibold;
+    }
+}
+
+@layer components {
     .badge {
-        @apply z-10 flex h-[68px] min-w-[200px] items-center gap-x-4 rounded-[10px] border border-border/40 bg-muted/95 p-4 shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-muted/60;
+        @apply z-10 flex h-[68px] min-w-[200px] items-center gap-x-4 rounded-lg bg-background p-4 shadow-2xl dark:bg-foreground;
     }
 }
 
@@ -88,5 +96,13 @@
         .container {
             @apply px-4;
         }
+    }
+
+    .subtitle {
+        @apply mb-8 text-lg font-light text-muted-foreground;
+    }
+
+    .section-title {
+        @apply relative flex w-max items-center justify-between gap-x-3 text-4xl font-bold before:h-[24px] before:w-[24px] before:bg-[url('/dots-light.svg')] before:bg-center before:bg-no-repeat before:dark:bg-[url('/dots-dark.svg')];
     }
 }
