@@ -22,7 +22,7 @@ export const projects = [
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc.',
     image: '/work/placeholder.png',
-    category: 'fullstack',
+    category: 'Next.js',
     link: '/',
     sourcecode: '/',
   },
