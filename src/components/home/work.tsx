@@ -21,7 +21,7 @@ const Work = () => {
             showcase of the latest projects I&apos;ve worked on.
           </p>
           <Link className={buttonVariants()} href="/projects">
-            All Projects{}
+            All Projects
           </Link>
         </div>
         {/* slider */}

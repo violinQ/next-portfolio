@@ -39,8 +39,7 @@ export default function Template({
         style={{
           transform: `translateY(${completion - 100}%)`,
         }}
-      ></span>
-      <div className="h-[4000px]"></div>
+      />
     </>
   );
 }
