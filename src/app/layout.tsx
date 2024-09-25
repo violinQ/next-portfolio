@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { Outfit } from 'next/font/google';
 
-import { ThemeProvider } from '@/components/ThemeProvider';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import { ThemeProvider } from '@/components/theme-provider';
+import Header from '@/components/header';
+import Footer from '@/components/footer';
 import './globals.css';
 
 const outfit = Outfit({ subsets: ['latin'] });

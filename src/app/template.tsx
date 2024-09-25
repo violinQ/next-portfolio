@@ -3,7 +3,7 @@
 import { ReactNode } from 'react';
 import { motion, Variants } from 'framer-motion';
 
-import { useScrollProgress } from '@/hooks/useScrollProgress';
+import { useScrollProgress } from '@/hooks/use-scroll-progress';
 
 // variants
 const variants: Variants = {

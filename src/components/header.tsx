@@ -1,6 +1,6 @@
-import Logo from './Logo';
-import ThemeToggle from './ThemeToggle';
-import { MobileNav, Nav } from './Nav';
+import Logo from './logo';
+import ThemeToggle from './theme-toggle';
+import { MobileNav, Nav } from './nav';
 
 const Header = () => {
   return (

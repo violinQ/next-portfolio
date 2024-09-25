@@ -4,8 +4,8 @@ import { ChevronDown, Download, Send } from 'lucide-react';
 import { RiBriefcase4Fill, RiTeamFill, RiTodoFill } from 'react-icons/ri';
 
 import { Button, buttonVariants } from '../ui/button';
-import Socials from '../Socials';
-import Badge from '../Badge';
+import Socials from '../socials';
+import Badge from '../badge';
 
 const Hero = () => {
   return (

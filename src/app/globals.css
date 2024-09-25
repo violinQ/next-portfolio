@@ -106,3 +106,9 @@
         @apply relative flex w-max items-center justify-between gap-x-3 text-4xl font-bold before:h-[24px] before:w-[24px] before:bg-[url('/dots-light.svg')] before:bg-center before:bg-no-repeat before:dark:bg-[url('/dots-dark.svg')];
     }
 }
+
+/* swiper bullets styles */
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    @apply bg-primary
+}

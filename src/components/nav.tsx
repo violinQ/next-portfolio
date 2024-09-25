@@ -9,8 +9,8 @@ import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { cn } from '@/lib/utils';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from './ui/sheet';
-import Logo from './Logo';
-import Socials from './Socials';
+import Logo from './logo';
+import Socials from './socials';
 
 const links = [
   { path: '/', name: 'home' },
