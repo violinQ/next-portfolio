@@ -12,10 +12,10 @@ const categories = [
 export default function Projects({
   searchParams,
 }: Readonly<{
-  searchParams: { category: string | undefined };
+  searchParams: { [key: string]: string | string[] | undefined };
 }>) {
   // get category from search params, default to 'all projects'
-  const { category = categories[0] } = searchParams;
+  const category = (searchParams.category || 'all projects') as string;
 
   const filteredProjects = projects.filter((project) => {
     // if category is 'all projects', return all projects, else filter by category

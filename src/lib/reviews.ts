@@ -1,3 +1,5 @@
+// This file is used to provide data to the Reviews component(/src/components/home/reviews.tsx).
+// This is simulated data and can be modified according to the actual situation.
 export const reviews = [
   {
     name: 'Maria',

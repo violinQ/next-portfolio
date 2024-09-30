@@ -45,13 +45,14 @@ const ContactForm = () => {
   });
 
   const onSubmit = (values: z.infer<typeof formSchema>) => {
+    // TODO: handle form submission
     console.log('values:', values);
   };
 
   return (
     <Form {...form}>
       <form
-        className="flex flex-col gap-y-4"
+        className="flex flex-col gap-y-4 [&_label]:flex [&_label]:items-center [&_label]:gap-x-1"
         onSubmit={form.handleSubmit(onSubmit)}
       >
         {/* name */}
@@ -60,7 +61,7 @@ const ContactForm = () => {
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="cta-form-label">
+              <FormLabel>
                 <User size={20} />
                 <span>Name</span>
               </FormLabel>
@@ -77,7 +78,7 @@ const ContactForm = () => {
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="cta-form-label">
+              <FormLabel>
                 <MailIcon size={20} />
                 <span>Email</span>
               </FormLabel>
@@ -94,7 +95,7 @@ const ContactForm = () => {
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="cta-form-label">
+              <FormLabel>
                 <MessageSquare size={20} />
                 <span>Message</span>
               </FormLabel>

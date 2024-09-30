@@ -1,3 +1,6 @@
+// This file is used to store project data.
+// Displayed in the work component (src/components/home/work.tsx) in the projects page (src/app/projects/page.tsx)
+// Here is sample data. In actual projects, please replace it with your own project data, which can be obtained from the database or API.
 export const projects = [
   {
     name: 'Project 1',

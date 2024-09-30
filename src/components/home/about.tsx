@@ -1,91 +1,8 @@
 import Image from 'next/image';
-import {
-  Briefcase,
-  Calendar,
-  GraduationCap,
-  HomeIcon,
-  MailIcon,
-  PhoneCall,
-  User2,
-} from 'lucide-react';
+import { Briefcase, GraduationCap } from 'lucide-react';
+
+import { information, qualifications, skills } from '@/lib/profile';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs';
-
-const information = [
-  {
-    label: 'name',
-    value: 'Tianlin Chen',
-    icon: <User2 size={20} />,
-  },
-  {
-    label: 'phone',
-    value: '+86 135 3689 4366',
-    icon: <PhoneCall size={20} />,
-  },
-  {
-    label: 'email',
-    value: 'tianlinchen1810@gmail.com',
-    icon: <MailIcon size={20} />,
-  },
-  {
-    label: 'birthday',
-    value: 'Born on 18 October 2002',
-    icon: <Calendar size={20} />,
-  },
-  {
-    label: 'graduation',
-    value: "Bachelor's degree in Computer Science",
-    icon: <GraduationCap size={20} />,
-  },
-  {
-    label: 'address',
-    value: 'Guangdong, China',
-    icon: <HomeIcon size={20} />,
-  },
-];
-
-const qualifications = {
-  education: [
-    {
-      university: 'Guangdong Vocational College of Science and Technology',
-      qualification: "Bachelor's degree in Computer Science",
-      duration: '2021 - 2024',
-    },
-  ],
-  experience: [
-    {
-      company: 'Zhuhai Kingsoft Digital Network Technology Co., Ltd.',
-      role: 'Front-end Developer',
-      duration: '2023 - 2024',
-    },
-  ],
-};
-
-const skills = {
-  skills: [
-    'HTML, CSS, JavaScript',
-    'Front-end Development',
-    'Back-end Development',
-    'Java, Python',
-  ],
-  tools: [
-    {
-      name: 'WebStorm',
-      imgPath: '/about/webstorm.svg',
-    },
-    {
-      name: 'VS Code',
-      imgPath: '/about/vscode.svg',
-    },
-    {
-      name: 'Git',
-      imgPath: '/about/git.svg',
-    },
-    {
-      name: 'Linux',
-      imgPath: '/about/linux.svg',
-    },
-  ],
-};
 
 const About = () => {
   return (
@@ -141,13 +58,15 @@ const About = () => {
                     </p>
                     {/* information */}
                     <div className="mb-12 grid gap-4 xl:grid-cols-2">
-                      {information.map(({ label, value, icon }) => (
+                      {information.map((info) => (
                         <div
-                          key={label}
+                          key={info.label}
                           className="mx-auto flex items-center gap-x-4 xl:mx-0"
                         >
-                          <div className="text-primary">{icon}</div>
-                          <div>{value}</div>
+                          <div className="text-primary">
+                            <info.icon size={20} />
+                          </div>
+                          <div>{info.value}</div>
                         </div>
                       ))}
                     </div>

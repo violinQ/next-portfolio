@@ -1,11 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown, Download, Send } from 'lucide-react';
-import { RiBriefcase4Fill, RiTeamFill, RiTodoFill } from 'react-icons/ri';
 
+import { achievement } from '@/lib/profile';
 import { Button, buttonVariants } from '../ui/button';
+import { CountUpBadge } from '../ui/count-up-badge';
 import Socials from '../socials';
-import Badge from '../badge';
+
+const [badge1, badge2, badge3] = achievement;
 
 const Hero = () => {
   return (
@@ -42,27 +44,27 @@ const Hero = () => {
           {/* image */}
           <div className="relative hidden xl:flex">
             {/* badge 1 */}
-            <Badge
+            <CountUpBadge
               className="absolute -left-[5rem] top-[24%]"
-              badgeText="Years Of Experience"
-              icon={<RiBriefcase4Fill />}
-              endCountNUm={2}
+              label={badge1.label}
+              icon={<badge1.icon />}
+              endCount={badge1.endCount}
             />
             {/* badge 2 */}
-            <Badge
+            <CountUpBadge
               className="absolute -left-[1rem] top-[80%]"
-              badgeText="Finished Projects"
-              icon={<RiTodoFill />}
-              endCountNUm={10}
-              endCountText="+"
+              label={badge2.label}
+              icon={<badge2.icon />}
+              endCount={badge2.endCount}
+              suffix={badge2.suffix}
             />
             {/* badge 3 */}
-            <Badge
+            <CountUpBadge
               className="absolute -right-4 top-[55%]"
-              badgeText="Happy Clients"
-              icon={<RiTeamFill />}
-              endCountNUm={10}
-              endCountText="+"
+              label={badge3.label}
+              icon={<badge3.icon />}
+              endCount={badge3.endCount}
+              suffix={badge3.suffix}
             />
             <div className="absolute -right-2 -top-1 h-[500px] w-[500px] bg-[url('/hero/shape-2-light.svg')] bg-no-repeat dark:bg-[url('/hero/shape-2-dark.svg')]" />
             <div className="relative h-[462px] w-[510px] bg-[url('/hero/shape-1.svg')] bg-bottom bg-no-repeat">
